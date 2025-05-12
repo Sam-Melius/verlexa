@@ -39,7 +39,8 @@ export default function Home() {
       {/* Testimonial Preview */}
       <section className="bg-gray-100 py-16 px-6 text-center">
         <blockquote className="max-w-2xl mx-auto italic text-lg">
-          “Without Verlexa, we wouldn't have been able to take the case.”
+        “Without Verlexa, we wouldn&apos;t have been able to take the case.”
+
         </blockquote>
         <p className="mt-4 font-semibold">— Partner at Northwest Litigation Group</p>
       </section>
