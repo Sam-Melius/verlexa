@@ -1,61 +1,124 @@
-// Verlexa - Homepage layout using Next.js (App Router) + Tailwind CSS
-// This file assumes you're using /app directory routing and have Tailwind set up.
+'use client';
+
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-white text-[#1b1b4f]">
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-blue-900 to-blue-600 text-white py-24 px-6 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-          Turn Days of Discovery Into Hours
-        </h1>
-        <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
-          Verlexa digitizes, indexes, and organizes legal documents so your team can focus on the case — not the chaos.
-        </p>
-        <a
-          href="/contact"
-          className="inline-block mt-8 px-6 py-3 bg-white text-blue-900 font-semibold rounded-xl shadow-md hover:bg-gray-100"
+      <section className="bg-[#1b1b4f] text-white text-center px-6 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-6"
         >
-          Request a Demo
-        </a>
+          <Image
+            src="/Verlexa_text_logo.png"
+            alt="Verlexa"
+            width={400}
+            height={200}
+            className="h-auto w-auto max-w-xs md:max-w-sm"
+            priority
+          />
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-4xl md:text-6xl font-bold"
+        >
+          Digitize. Organize. Win Cases.
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-4 text-[#c1a01e] text-lg max-w-2xl mx-auto"
+        >
+          Verlexa helps law firms streamline document discovery like never before.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+          className="mt-8"
+        >
+          <a
+            href="#contact"
+            className="bg-[#c1a01e] text-[#1b1b4f] px-6 py-3 rounded font-semibold hover:brightness-110"
+          >
+            Get a Quote
+          </a>
+        </motion.div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-        <div>
-          <h3 className="text-xl font-semibold mb-2">Fast Processing</h3>
-          <p>Digitize and index massive discovery files in hours, not days.</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold mb-2">Smart Organization</h3>
-          <p>Automatically label, categorize, and apply Bates stamps.</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold mb-2">Advanced Search</h3>
-          <p>Use database-style querying to find what matters fast.</p>
-        </div>
+        {[
+          {
+            title: "Fast Processing",
+            desc: "Digitize and index massive discovery files in hours, not days.",
+          },
+          {
+            title: "Smart Organization",
+            desc: "Automatically label, categorize, and apply date stamps.",
+          },
+          {
+            title: "Advanced Search",
+            desc: "Use database-style querying to find what matters fast.",
+          },
+        ].map((item, idx) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+            <p>{item.desc}</p>
+          </motion.div>
+        ))}
       </section>
 
       {/* Testimonial Preview */}
-      <section className="bg-gray-100 py-16 px-6 text-center">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="bg-[#f5f5f5] py-16 px-6 text-center"
+      >
         <blockquote className="max-w-2xl mx-auto italic text-lg">
-        “Without Verlexa, we wouldn&apos;t have been able to take the case.”
-
+          “Without Verlexa, we would not have been able to take the case.”
         </blockquote>
-        <p className="mt-4 font-semibold">— Partner at Northwest Litigation Group</p>
-      </section>
+        <p className="mt-4 font-semibold text-[#1b1b4f]">
+          — Partner at Northwest Litigation Group
+        </p>
+      </motion.section>
 
       {/* Call to Action */}
-      <section className="py-16 px-6 text-center">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="py-16 px-6 text-center"
+      >
         <h2 className="text-3xl font-bold">Ready to streamline discovery?</h2>
         <p className="mt-4">Let’s talk about how Verlexa can work for your firm.</p>
         <a
           href="/contact"
-          className="mt-6 inline-block px-6 py-3 bg-blue-900 text-white rounded-xl font-semibold hover:bg-blue-700"
+          className="mt-6 inline-block px-6 py-3 bg-[#1b1b4f] text-white rounded-xl font-semibold hover:bg-[#15153d]"
         >
           Contact Us
         </a>
-      </section>
+      </motion.section>
     </main>
   );
 }
