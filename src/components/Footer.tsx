@@ -1,8 +1,9 @@
 export default function Footer() {
     return (
-      <footer className="bg-gray-100 text-center py-8 text-sm text-gray-600 mt-20">
-        <p>&copy; {new Date().getFullYear()} Verlexa, Inc. All rights reserved.</p>
-      </footer>
+        <footer className="bg-[#1b1b4f] text-[#f5f5f5] text-sm text-center py-6">
+          © {new Date().getFullYear()} Verlexa. All rights reserved.
+        </footer>
+
     );
   }
   
