@@ -8,11 +8,17 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-[#1b1b4f] shadow-sm sticky top-0 z-50">
+    <header className="bg-[#1b1b4f]/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <Link href="/">
-      <Image src="/customcolor_icon_customcolor_background.png" alt="Verlexa" width={40} height={300} className="rounded cursor-pointer" />
-    </Link>
+        <Link href="/">
+          <Image
+            src="/Logo_transparent.png"
+            alt="Verlexa"
+            width={40}
+            height={300}
+            className="rounded cursor-pointer"
+          />
+        </Link>
 
         <nav className="space-x-6 text-white font-medium">
           <Link
@@ -20,6 +26,12 @@ export default function Header() {
             className={pathname === '/' ? 'text-[#c1a01e] font-semibold' : ''}
           >
             Home
+          </Link>
+          <Link
+            href="/about"
+            className={pathname === '/about' ? 'text-[#c1a01e] font-semibold' : ''}
+          >
+            About
           </Link>
           <Link
             href="/contact"
