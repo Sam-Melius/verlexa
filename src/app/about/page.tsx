@@ -18,11 +18,11 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black opacity-50 z-0" />
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
           <Image
-            src="/logo_text_transparent.png"
+            src="/Logo_text_transparent.png"
             alt="Verlexa"
-            width={300}
-            height={100}
-            className="mb-4"
+            width={400}
+            height={200}
+            className="mb-4 h-auto w-auto max-w-xs md:max-w-sm"
             priority
           />
           <p className="text-white text-lg md:text-xl max-w-xl">
