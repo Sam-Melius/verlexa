@@ -7,72 +7,71 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#1b1b4f]">
 
+      {/* Hero Section */}
+      <section className="relative text-white text-center px-6 py-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/4.jpg" // make sure this path matches your /public folder
+            alt="Lady Justice"
+            fill
+            className="object-cover opacity-50 "
+            priority
+          />
+          <div className="absolute inset-0 bg-black opacity-50" />
+        </div>
 
-{/* Hero Section */}
-<section className="relative text-white text-center px-6 py-16 overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image
-      src="/4.jpg" // make sure this path matches your /public folder
-      alt="Lady Justice"
-      fill
-      className="object-cover opacity-50"
-      priority
-    />
-    <div className="absolute inset-0  opacity-70" />
-  </div>
+        {/* Animated Foreground Content */}
+        <div className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mb-6"
+          >
+            <Image
+              src="/Logo_text_transparent.png"
+              alt="Verlexa"
+              width={400}
+              height={200}
+              className="h-auto w-auto max-w-xs md:max-w-sm mt-10"
+              priority
+            />
+          </motion.div>
 
-  {/* Animated Foreground Content */}
-  <div className="relative z-10">
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="flex justify-center mb-6"
-    >
-      <Image
-        src="/Logo_text_transparent.png"
-        alt="Verlexa"
-        width={400}
-        height={200}
-        className="h-auto w-auto max-w-xs md:max-w-sm mt-10"
-        priority
-      />
-    </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold"
+          >
+            Digitize. Organize. Win Cases.
+          </motion.h1>
 
-    <motion.h1
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3, duration: 0.6 }}
-      className="text-4xl md:text-6xl font-bold"
-    >
-      Digitize. Organize. Win Cases.
-    </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="mt-4 text-[#c1a01e] text-lg max-w-2xl mx-auto"
+          >
+            Verlexa helps law firms streamline document discovery like never before.
+          </motion.p>
 
-    <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 0.6 }}
-      className="mt-4 text-[#c1a01e] text-lg max-w-2xl mx-auto"
-    >
-      Verlexa helps law firms streamline document discovery like never before.
-    </motion.p>
-
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.9, duration: 0.6 }}
-      className="mt-8"
-    >
-      <a
-        href="#contact"
-        className="bg-[#c1a01e] text-[#1b1b4f] px-6 py-3 rounded font-semibold hover:brightness-110"
-      >
-        Get a Quote
-      </a>
-    </motion.div>
-  </div>
-</section>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.6 }}
+            className="mt-8"
+          >
+            <a
+              href="/contact"
+              className="bg-[#c1a01e] text-[#1b1b4f] px-6 py-3 rounded font-semibold hover:brightness-110"
+            >
+              Get a Quote
+            </a>
+          </motion.div>
+        </div>
+      </section>
 
 
       {/* Features Section */}
@@ -106,34 +105,34 @@ export default function Home() {
 
       {/* Testimonial Preview */}
       <motion.section
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="relative text-white text-center py-16 px-6 overflow-hidden"
->
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image
-      src="/2.jpg" // Ensure this is in your /public folder
-      alt="Client meeting"
-      fill
-      className="object-cover opacity-100"
-      priority
-    />
-    <div className="absolute inset-0 bg-[#1b1b4f] opacity-60" />
-  </div>
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="relative text-white text-center py-16 px-6 overflow-hidden"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/2.jpg" // Ensure this is in your /public folder
+            alt="Client meeting"
+            fill
+            className="object-cover opacity-100"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#1b1b4f] opacity-60" />
+        </div>
 
-  {/* Foreground Content */}
-  <div className="relative z-10 max-w-2xl mx-auto">
-    <blockquote className="italic text-lg">
-      “Without Verlexa, we would not have been able to take the case.”
-    </blockquote>
-    <p className="mt-4 font-semibold text-[#c1a01e]">
-      — Partner at Northwest Litigation Group
-    </p>
-  </div>
-</motion.section>
+        {/* Foreground Content */}
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <blockquote className="italic text-lg">
+            “Without Verlexa, we would not have been able to take the case.”
+          </blockquote>
+          <p className="mt-4 font-semibold text-[#c1a01e]">
+            — Partner at Northwest Litigation Group
+          </p>
+        </div>
+      </motion.section>
 
 
       {/* Call to Action */}
