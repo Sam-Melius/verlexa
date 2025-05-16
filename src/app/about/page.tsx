@@ -56,7 +56,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-semibold mb-2">What We Do</h2>
             <p>
               Our platform digitizes massive volumes of legal documents, applies smart labeling and categorization,
-              and enables advanced querying — all while maintaining chain of custody and accuracy. Whether you're
+              and enables advanced querying — all while maintaining chain of custody and accuracy. Whether you&apos;re
               preparing for litigation or managing case records, Verlexa is your digital discovery partner.
             </p>
           </div>
