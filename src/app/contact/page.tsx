@@ -12,7 +12,7 @@ export default function ContactPage() {
           src="/6.jpg"
           alt="Courthouse Columns"
           fill
-          className="object-cover opacity-700"
+          className="object-cover "
           priority
         />
         <div className="absolute inset-0 bg-black opacity-70" />

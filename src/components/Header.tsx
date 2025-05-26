@@ -34,6 +34,12 @@ export default function Header() {
             About
           </Link>
           <Link
+            href="/testimonials"
+            className={pathname === '/testimonials' ? 'text-[#c1a01e] font-semibold' : ''}
+          >
+            Testimonials
+          </Link>
+          <Link
             href="/contact"
             className={pathname === '/contact' ? 'text-[#c1a01e] font-semibold' : ''}
           >
