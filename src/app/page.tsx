@@ -129,7 +129,7 @@ export default function Home() {
             “Without Verlexa, we would not have been able to take the case.”
           </blockquote>
           <p className="mt-4 font-semibold text-[#c1a01e]">
-            — Partner at Northwest Litigation Group
+            — Steve P, litigator, California
           </p>
         </div>
       </motion.section>

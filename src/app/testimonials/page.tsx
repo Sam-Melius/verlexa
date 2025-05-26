@@ -33,7 +33,7 @@ export default function TestimonialsPage() {
             <p className="italic text-lg">
               “Verlexa drastically reduced our discovery time. We were able to build a stronger case faster.”
             </p>
-            <p className="mt-4 font-semibold text-[#c1a01e]">— Jane Peterson, Litigation Lead at Crest & Rowe LLP</p>
+            <p className="mt-4 font-semibold text-[#c1a01e]">— Jane M, Litigator, Oregon</p>
           </div>
 
           {/* Testimonial 2 */}
@@ -41,7 +41,7 @@ export default function TestimonialsPage() {
             <p className="italic text-lg">
               “I was skeptical at first, but Verlexa’s tools saved our firm hundreds of hours. Worth every penny.”
             </p>
-            <p className="mt-4 font-semibold text-[#c1a01e]">— Michael Torres, Partner at Greene & Associates</p>
+            <p className="mt-4 font-semibold text-[#c1a01e]">— Michael T, Legal Counsel, California</p>
           </div>
 
           {/* Testimonial 3 */}
@@ -49,7 +49,7 @@ export default function TestimonialsPage() {
             <p className="italic text-lg">
               “The ability to tag and search exhibits so easily changed the way we prep for depositions.”
             </p>
-            <p className="mt-4 font-semibold text-[#c1a01e]">— Sara Lin, Senior Counsel at Hudson Legal</p>
+            <p className="mt-4 font-semibold text-[#c1a01e]">— Sara L, Legal Counsel, Washington</p>
           </div>
         </div>
       </motion.div>
