@@ -93,6 +93,11 @@ export default function ContactPage() {
             Send Message
           </button>
         </form>
+        <div className="mt-12 text-center text-md text-gray-600">
+          <p>Verlexa Headquarters</p>
+          <p>1224 US-377 Suite 303 #242</p>
+          <p>Roanoke, TX 76262</p>
+        </div>
       </motion.div>
     </main>
   );
