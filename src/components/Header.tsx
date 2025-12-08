@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="bg-[#1b1b4f]/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className=" mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
             src="/Logo_transparent.png"
