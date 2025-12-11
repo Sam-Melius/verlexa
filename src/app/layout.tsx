@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   title: 'Verlexa',
   description: 'Advanced discovery software for legal professionals.',
     icons: {
-    icon: "/favicon.ico",             // ✅ square icon preferred
+    icon: "/favicon.ico",             
     shortcut: "/favicon.ico",
-    apple: "/favicon.png",            // optional
+    apple: "/favicon.png",            
   },
    openGraph: {
     title: "Verlexa",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Verlexa",
     images: [
       {
-        url: "https://verlexa.com/Logo_transparent.png", // this is fine for social previews
+        url: "https://verlexa.com/Logo_transparent.png", 
         width: 1200,
         height: 630,
         alt: "Verlexa",
